@@ -175,7 +175,8 @@ class GF2nField:
         return Bin.bin_mod(Bin.bin_multiply(_bin1, _bin2), self._pp)
 
     def inverse(self, _bin):
-        return Bin.bin_mod(Bin.bin_extend_euclid(_bin, self._pp)[0], self._pp)
+        # return Bin.bin_mod(Bin.bin_extend_euclid(_bin, self._pp)[0], self._pp)
+        return Bin.bin_mod(Bin.bin_extend_euclid(_bin, self._pp)[0], self._pp) if _bin != '0' else '0'
 
     def divide(self, dividend, divisor):
         return self.multiply(dividend, self.inverse(divisor))

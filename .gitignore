@@ -1,2 +1,3 @@
 tempCodeRunnerFile.py
-__pycache__/GF2nPY.cpython-37.pyc
+__pycache__/*
+.vscode/launch.json
